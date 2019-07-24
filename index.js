@@ -136,6 +136,7 @@ exports.dialogflowFirebaseFulfillment =
         		JSON.stringify(request));
         	agent.add("I love " + city + " tooo. Remember this?");
         	agent.add(data.memory[index].desc);
+		agent.add(new Image("https://avatars1.githubusercontent.com/u/36980416?s=200&v=4&source=post_page---------------------------"));
          })
          .catch((err) => {
            console.error('Error creating session entitytype: ', err);
