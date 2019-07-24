@@ -136,7 +136,7 @@ exports.dialogflowFirebaseFulfillment =
         		JSON.stringify(request));
         	agent.add("I love " + city + " tooo. Remember this?");
         	agent.add(data.memory[index].desc);
-		agent.add(new Image("https://avatars1.githubusercontent.com/u/36980416?s=200&v=4&source=post_page---------------------------"));
+		agent.add(new Image(data.memory[index].pic));
          })
          .catch((err) => {
            console.error('Error creating session entitytype: ', err);
@@ -155,7 +155,6 @@ exports.dialogflowFirebaseFulfillment =
      	if (!context || !cityName) {
        		console.error('Expected context or parameter was not present');
        		agent.add("I'm sorry, I forgot which city we're talking about!");
-       		agent.add("Would you like me to ask about New York, LA, Chicago, or Houston?");
        		return;
      	}
 
